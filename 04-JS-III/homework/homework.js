@@ -26,10 +26,8 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  for (let x = 0; x < array.length; x++) {
-    x = array[x] + 1
-  }
-  return array.push(x)
+  let map1 = array.map(x => x + 1);
+  return map1
 }
 
 
@@ -58,9 +56,8 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  for (x = 0; x < palabras.length; x++) {
-    palabras[x] + ' ';
-  }
+return palabras.join(' ')
+
 }
 
 
@@ -123,7 +120,18 @@ function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
-  //Escribe tu código aquí   
+  //Escribe tu código aquí  
+  switch (numeroDeDia) {
+    case '1':
+      return "Es fin de semana"
+      break;
+    case '7': 
+      return "Es fin de semana"
+      break;
+    default: 
+      return "Es dia Laboral"
+      break;
+  } 
   
 } 
 
@@ -132,6 +140,7 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
+
   
 }
 
@@ -149,6 +158,7 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+
 }
 
 
@@ -156,6 +166,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  let numeros = []
+  for (let numero of array) {
+    if (numero > 100) {
+      numeros.push(numero)
+    }
+  }
+  return numeros
 }
 
 
