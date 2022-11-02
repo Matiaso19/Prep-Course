@@ -99,6 +99,13 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  let mayor = 0
+  for (let x = 0; x < numeros.length; x++) {
+    if (numeros[x] > mayor) {
+      mayor = numeros[x]
+    }  
+  } 
+  return mayor
 }
 
 
@@ -112,6 +119,13 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
+  let mayor18 = 0
+  for (let numero of arreglo) {
+    if (numero > 18) {
+      mayor18 = mayor18 + 1
+    }
+  }
+  return mayor18
 
 }
 
@@ -124,7 +138,6 @@ function diaDeLaSemana(numeroDeDia) {
   switch (numeroDeDia) {
     case '1':
       return "Es fin de semana"
-      break;
     case '7': 
       return "Es fin de semana"
       break;
@@ -140,8 +153,7 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-
-  
+ 
 }
 
 
