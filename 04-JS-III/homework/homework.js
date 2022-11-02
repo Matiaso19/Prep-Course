@@ -68,6 +68,7 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  return array.includes(elemento)
 }
 
 
@@ -75,6 +76,11 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  let sumatoria = 0
+  for (let n of numeros) {
+    sumatoria = sumatoria + n
+  } 
+  return sumatoria
 }
 
 
@@ -82,6 +88,13 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  let promedio = 0
+  let suma = 0
+  for (let n of resultadosTest) {
+    suma = suma + n
+    promedio = suma / resultadosTest.length
+  }
+  return promedio
 }
 
 
