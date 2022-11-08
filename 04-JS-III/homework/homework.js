@@ -226,15 +226,16 @@ function breakStatement(numero) {
   //Pista: usá el statement 'break'
   // Tu código:
   let aumentado1 = [] 
-  let x = 0
   let suma = numero
+  let x = 0
   while (x <10) {
-    if (suma === x) {
-      return "Se interrumpió la ejecución"
-    }
-    break;
+    x++
     suma = suma + 2
     aumentado1.push(suma)
+    if (suma === x) {
+      return "Se interrumpió la ejecución"
+    break;
+    }
    
   }     
   return aumentado1
@@ -247,7 +248,21 @@ function continueStatement(numero) {
   //Devolver el array
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
-  // Tu código:
+  // Tu código
+  let aumentado2 = [] 
+  let suma = numero
+  let x = 0
+  while (x <10) {
+    x++
+    if (x === 5) {
+      continue;
+    } 
+    suma = suma + 2
+    aumentado2.push(suma)
+    
+  }     
+  return aumentado2
+
 }
 
 
