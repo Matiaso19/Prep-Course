@@ -191,7 +191,9 @@ function mesesDelAño(array) {
     let meses = []
     for (let mes of array) {
       if (array.includes("Enero") && array.includes("Marzo") && array.includes("Noviembre")) {
+        if (mes === "Enero" || mes === "Marzo" || mes === "Noviembre") {
         meses.push(mes)
+        }
     } else {
       return "No se encontraron los meses pedidos"
     }
