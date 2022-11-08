@@ -175,12 +175,9 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  function sonIguales(lista) {
-  for (let x = 0; x < lista.length; x++) {
-    return  x === x
+  for (x = 0; x < arreglo.length; x++) {
+    return arreglo[x] === arreglo[x + 1]
   }
-}
-  arreglo.every(sonIguales)
   
 }
 
@@ -193,8 +190,8 @@ function mesesDelAño(array) {
   // Tu código:
     let meses = []
     for (let mes of array) {
-      if (mes === "Enero" && mes === "Marzo" && mes === "Noviembre") {
-        array.push(mes)
+      if (array.includes("Enero") && array.includes("Marzo") && array.includes("Noviembre")) {
+        meses.push(mes)
     } else {
       return "No se encontraron los meses pedidos"
     }
