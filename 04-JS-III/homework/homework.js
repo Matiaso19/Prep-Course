@@ -113,18 +113,15 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-      
+      let multiplicados = 1
       if (arguments.length > 1) {
-      
-        arguments.reduce(function(acumulador, valorActual){
-          acumulador = acumulador * valorActual;
-          return acumulador;
-        });
+        for (let i = 0; i < arguments.length; i++) {
+          multiplicados = arguments[i] * multiplicados
+        } return multiplicados
       } else if (arguments.length === 0) {
       return 0
       } else if (arguments.length === 1) {
-    
-      return arguments
+      return arguments[0]
     }
   }
 
