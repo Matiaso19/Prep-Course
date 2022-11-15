@@ -78,12 +78,7 @@ function tienePropiedad (objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (objeto['propiedad'] !== propiedad) {
-    return false
-  }
-  else {
-    return true
-  }
+  return objeto.hasOwnProperty(propiedad)
 }
 
 function verificarPassword (usuario, password) {
@@ -154,6 +149,14 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
+  let descuento = 0
+  let precio = 0
+  producto['calcularPrecioDescuento'] = function () {
+    let descuento = producto.precio * producto.porcentajeDeDescuento;
+    let precio = producto.precio - descuento;
+    return producto;
+
+  }
 
 }
 
