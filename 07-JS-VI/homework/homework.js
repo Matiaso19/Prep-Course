@@ -36,6 +36,9 @@ function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
+  array.forEach(function(elementos) {
+    cb(elementos)
+  })
   
 }
 
@@ -44,9 +47,10 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-  let mapeonuevo = array.map(cb(array)) 
-    return cb(array)
-  
+
+  const nuevomap = array.map(function(elemento) {
+     cb(elemento)
+})
 }
 
 function filter(array) {
@@ -54,7 +58,7 @@ function filter(array) {
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
   let nuevoarray = array.filter(array => array[0] === "a")
-  return nuevoarray
+  return nuevoarray;
 }
 
 // No modificar nada debajo de esta línea
